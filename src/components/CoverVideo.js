@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import MainVideo from '../assets/Walking Girl.mp4';
+import {motion} from "framer-motion";
 
 const VideoContainer = styled.section`
   width: 100%;
@@ -27,7 +28,7 @@ const DarkOverlay = styled.div`
   background:${props => `rgba(${props.theme.bodyRgba},0.6)`}
 `
 
-const Title = styled.div`
+const Title = styled(motion.div)`
   position: absolute;
   top: 0;
   bottom: 0;
@@ -60,17 +61,40 @@ const Title = styled.div`
   }
 `
 
+const container = {
+    hidden:{
+        opacity:0,
+    },
+    show: {
+        opacity: 1,
+
+        transition: {
+            delayChildren:2,
+            staggerChildren:.3,
+        }
+    }
+}
+
+const item = {
+    hidden:{
+        opacity:0,
+    },
+    show: {
+      opacity:1,
+    }
+}
+
 const CoverVideo = () => {
     return (
         <VideoContainer>
             <DarkOverlay/>
-            <Title>
+            <Title variants={container} initial="hidden" animate="show">
                 <div>
-                    <h1 data-scroll data-scroll-delay='0.13' date-scroll-speed="4">V</h1>
-                    <h1 data-scroll data-scroll-delay='0.09' date-scroll-speed="4">A</h1>
-                    <h1 data-scroll data-scroll-delay='0.06' date-scroll-speed="4">S</h1>
-                    <h1 data-scroll data-scroll-delay='0.04' date-scroll-speed="4">C</h1>
-                    <h1 data-scroll data-scroll-delay='0.02' date-scroll-speed="4">O</h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.13' date-scroll-speed="4">V</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.09' date-scroll-speed="4">A</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.06' date-scroll-speed="4">S</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.04' date-scroll-speed="4">C</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.02' date-scroll-speed="4">O</motion.h1>
                 </div>
                 <h2  data-scroll data-scroll-delay='0.04' date-scroll-speed="4">Inspire. Create. Belive</h2>
             </Title>
