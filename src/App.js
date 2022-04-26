@@ -8,7 +8,8 @@ import Home from "./sections/Home";
 import {BrowserRouter} from "react-router-dom";
 import {AnimatePresence} from "framer-motion";
 import About from "./sections/About";
-
+import Shop from "./sections/Shop";
+import LocomotiveScrollProxy from './components/ScrollTriggerProxy';
 
 function App() {
 
@@ -34,11 +35,14 @@ function App() {
                     }
                     containerRef={containerRef}
                 >
+                
                     <BrowserRouter>
+                    <LocomotiveScrollProxy/>
                         <AnimatePresence>
-                            <main data-scroll-container ref={containerRef}>
+                            <main className="App" data-scroll-container ref={containerRef}>
                                 <Home/>
                                 <About/>
+                                <Shop/>
                             </main>
                         </AnimatePresence>
                     </BrowserRouter>
