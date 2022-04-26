@@ -96,7 +96,7 @@ const CoverVideo = () => {
                     <motion.h1 variants={item} data-scroll data-scroll-delay='0.04' date-scroll-speed="4">C</motion.h1>
                     <motion.h1 variants={item} data-scroll data-scroll-delay='0.02' date-scroll-speed="4">O</motion.h1>
                 </div>
-                <h2  data-scroll data-scroll-delay='0.04' date-scroll-speed="4">Inspire. Create. Belive</h2>
+                <motion.h2 variants={item} data-scroll data-scroll-delay='0.04' date-scroll-speed="4">Inspire. Create. Belive</motion.h2>
             </Title>
             <video src={MainVideo} type="video/mp4" autoPlay muted loop/>
         </VideoContainer>
