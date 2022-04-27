@@ -38,7 +38,7 @@ const Title = styled.h1`
   position: absolute;
   top: 1rem;
   left: 5%;
-  z-index: 5;
+  z-index: 11;
 `;
 
 const Left = styled.div`
@@ -47,7 +47,7 @@ const Left = styled.div`
   color: ${(props) => props.theme.text};
 
   min-height: 100vh;
-  z-index: 4;
+  z-index: 5;
 
   position: fixed;
   left: 0;
@@ -138,7 +138,7 @@ const Shop = () => {
           markers: true,
         },
         height: `${scrollingElement.scrollWidth}px`,
-        ease: "none",
+        // ease: "none",
       });
 
       //Scroll horizontal
@@ -149,7 +149,7 @@ const Shop = () => {
           end: pinWrapWidth,
           scroller: ".App",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
         x: -pinWrapWidth,
         ease: "none",
@@ -157,7 +157,10 @@ const Shop = () => {
 
       ScrollTrigger.refresh();
     }, 1000);
-    return () => {};
+    return () => {
+      t1.kill();
+      ScrollTrigger.kill();
+    };
   }, []);
 
   return (

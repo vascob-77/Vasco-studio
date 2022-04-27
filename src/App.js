@@ -11,6 +11,8 @@ import About from "./sections/About";
 import Shop from "./sections/Shop";
 import LocomotiveScrollProxy from './components/ScrollTriggerProxy';
 import Banners from "./sections/Banners";
+import { NewArrival } from "./sections/NewArrival";
+import { Footer } from "./sections/Footer";
 
 function App() {
 
@@ -45,6 +47,8 @@ function App() {
                                 <About/>
                                 <Shop/>
                                 <Banners/>
+                                <NewArrival/>
+                                <Footer />
                             </main>
                         </AnimatePresence>
                     </BrowserRouter>
