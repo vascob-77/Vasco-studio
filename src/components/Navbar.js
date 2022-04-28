@@ -63,11 +63,6 @@ const MenuItem = styled(motion.li)`
   cursor: pointer;
 `
 
-const itemVariants = {
-    hidden:{
-
-    }
-}
 
 const Navbar = () => {
 
@@ -89,7 +84,7 @@ const Navbar = () => {
     }
 
     return (
-        <NavContainer click={click} initial={{y:'-100%'}} animate={{y:0}} transition={{duration:2,delay:2}}>
+        <NavContainer click={click} initial={{y:'-100%'}} animate={{y:0}} transition={{duration:2,delay:5}}>
             <MenuItems drag="y" dragConstraints={{top:0,bottom:70}} dragElastic={0.05} dragSnapToOrigin>
                 <MenuBtn onClick={() => setClick(!click)}>Menu</MenuBtn>
                 <MenuItem onClick={() => handleScroll('#home')}whileHover={{scale:1.1,y:-5}} whileTap={{scale:0.9,Y:0}}>Home</MenuItem>

@@ -51,8 +51,8 @@ const Logo = () => {
             opacity: 1,
             x:-5,
             transition: {
-                duration: 2,
-                delay:2,
+                duration: 5,
+                delay:5,
                 ease:'easeInOut'
             }
         }
