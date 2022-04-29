@@ -33,8 +33,12 @@ img{
 }
 
 h3{
-    font-size: ${props => props.theme.fontxl};
+    font-size: ${props => props.theme.fontxxl};
     font-family:'Kaushan Script';
+
+    @media (max-width:48em){
+        font-size: ${props => props.theme.fontxl};
+    }
 }
 `
 
@@ -54,6 +58,16 @@ ul{
     padding:0 1rem;
     border-top:1px solid ${props => props.theme.text};
     border-bottom:1px solid ${props => props.theme.text};
+
+    @media (max-width:64em){
+        flex-direction: column;
+        justify-content: center;
+     
+    }
+
+    @media (max-width:48em){
+        font-size: ${props => props.theme.fontmd};
+    }
 }
 
 li{
@@ -65,6 +79,11 @@ li{
 
     &:hover{
         transform: scale(1.1);
+    }
+
+    @media (max-width:48em){
+       padding:1rem;
+       font-size: ${props => props.theme.fontmd};
     }
 }
 `

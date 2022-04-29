@@ -52,7 +52,7 @@ const Logo = () => {
             x:-5,
             transition: {
                 duration: 5,
-                delay:5,
+                delay:2,
                 ease:'easeInOut'
             }
         }

@@ -39,6 +39,15 @@ const Title = styled.h1`
   top: 1rem;
   left: 5%;
   z-index: 11;
+
+  @media (max-width:64em){
+    font-size: ${props => props.theme.fontxxl};
+   
+  }
+
+  @media (max-width:48em){
+    font-size: ${props => props.theme.fontxl};
+  }
 `;
 
 const Left = styled.div`
@@ -61,6 +70,18 @@ const Left = styled.div`
     width: 80%;
     margin: 0 auto;
   }
+
+  @media (max-width:48em){
+      p{
+        font-size: ${props => props.theme.fontsm};
+      }
+    }
+
+    @media (max-width:30em){
+      p{
+        font-size: ${props => props.theme.fontxs};
+      }
+    }
 `;
 
 const Right = styled.div`
@@ -99,6 +120,10 @@ const Item = styled(motion.div)`
     text-align: center;
     cursor: pointer;
   }
+
+  @media (max-width:48em){
+    width: 15rem;
+  }
 `;
 
 const Product = ({ img, title = "" }) => {
@@ -135,7 +160,6 @@ const Shop = () => {
           scroller: ".App",
           scrub: true,
           pin: true,
-          markers: true,
         },
         height: `${scrollingElement.scrollWidth}px`,
         // ease: "none",
@@ -149,7 +173,6 @@ const Shop = () => {
           end: pinWrapWidth,
           scroller: ".App",
           scrub: true,
-          // markers: true,
         },
         x: -pinWrapWidth,
         ease: "none",
@@ -166,7 +189,7 @@ const Shop = () => {
   return (
     <Section ref={ref} id="shop">
       <Title data-scroll data-scroll-speed="-1">
-        Nouveautés
+        New Collection
       </Title>
       <Left>
         <p>
