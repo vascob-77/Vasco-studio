@@ -8,13 +8,13 @@ import { useLocomotiveScroll } from "react-locomotive-scroll";
 const Section = styled.section`
 min-height: 100vh;
 width: 100vw;
-margin: 5rem auto;
-
+margin-top: 5rem;
+margin: auto;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-content: center;
-
+overflow: hidden;
 background-color: ${(props) => props.theme.body};
 color: ${(props) => props.theme.text};
 
